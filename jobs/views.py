@@ -1,5 +1,11 @@
 from django.shortcuts import render
-
+from .models import Job
 # Create your views here.
+
+
 def index(request):
-    return render(request, 'jobs/index.html')
+    jobs = Job.objects.all()
+    context = {
+        'jobs': jobs,
+    }
+    return render(request, 'jobs/index.html', context)
