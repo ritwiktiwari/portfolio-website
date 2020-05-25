@@ -7,3 +7,7 @@ class Blog(models.Model):
     pub_date = models.DateTimeField(default=datetime.now, blank=True)
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
+    is_published = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title

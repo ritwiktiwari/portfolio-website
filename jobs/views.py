@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Job
 from photos.models import Photo
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.core.paginator import Paginator
 # Create your views here.
 
 
